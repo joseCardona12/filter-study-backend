@@ -9,7 +9,7 @@ configDotenv();
 const PORT:number = parseInt(process.env.PORT as string);
 const app:Express = express();
 app.use(cors({
-    origin: "http://localhost:3001",
+    origin: ["http://localhost:3001", "https://filter-study-frontend.vercel.app/"],
     methods: "GET,POST,PUT,DELETE",
     credentials:true
 }));
